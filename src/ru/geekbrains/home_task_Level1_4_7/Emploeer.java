@@ -12,9 +12,6 @@ public class Emploeer {
         this.age = 35;
         this.salary = 100000.00;
         this.function = "Директор";
-
-
-
     }
     Emploeer (String firstName, int age, double salary, String function, int tabNamber) {
         this.firstName = firstName;
@@ -22,7 +19,6 @@ public class Emploeer {
         this.salary = salary;
         this.function = function;
         this.tabNamber = tabNamber;
-
     }
 
     public String getFirstName (){
@@ -40,10 +36,10 @@ public class Emploeer {
     public int getTablNomber () {
         return tabNamber;
     }
-    private int countTabNamber() {
+ /*   private int countTabNamber() {
         tabNamber = tabNamber + 1;
         return tabNamber;
 
     }
-
+*/
 }
