@@ -1,6 +1,6 @@
 package ru.geekbrains.home_task_Level1_4_7;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class Main {
 
