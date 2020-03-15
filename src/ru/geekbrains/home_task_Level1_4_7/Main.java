@@ -33,12 +33,12 @@ public class Main {
          staff[4] = new Emploeer("Счастливый",51,50000,"happy manager",tabNamber);
 
 
-         for (int i = 0; i < staff.length; i++) {
-             emploeer1 = staff[i];
-             if (emploeer1.age > 40) {
-                 System.out.println("Фамилия " + emploeer1.firstName + " Должность " + emploeer1.function + " з/п " + emploeer1.salary);
-             }
-         }
+        for (Emploeer emploeer : staff) {
+            emploeer1 = emploeer;
+            if (emploeer1.age > 40) {
+                System.out.println("Фамилия " + emploeer1.firstName + " Должность " + emploeer1.function + " з/п " + emploeer1.salary);
+            }
+        }
 
          upSallary(staff,emploeer1);
 
