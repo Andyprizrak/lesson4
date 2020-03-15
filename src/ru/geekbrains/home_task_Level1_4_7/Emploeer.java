@@ -38,9 +38,9 @@ public class Emploeer {
     public int getPersonalNamber () {
         return personalNamber;
     }
-    private int persinalInn() {
+    private void persinalInn() {
         personalNamber = 5503000 + tabNamber;
-        return tabNamber;
+      //  return tabNamber;
 
     }
 
