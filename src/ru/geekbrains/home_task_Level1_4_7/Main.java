@@ -4,10 +4,9 @@ package ru.geekbrains.home_task_Level1_4_7;
 
 public class Main {
 
-    private static void upSallary(Emploeer staff[], Emploeer emploeer){
+    private static void upSallary(Emploeer staff[]){
         for (int i = 0; i < staff.length; i++){
-            emploeer = staff[i];
-            if (emploeer.age > 45) {emploeer.salary = emploeer.salary+5000;}
+            if (staff[i].age > 45) {staff[i].salary = staff[i].salary+5000;}
         }
     }
 
@@ -17,48 +16,41 @@ public class Main {
 
         System.out.println("Фамилия " + emploeer1.getFirstName() + " Должность " + emploeer1.getFunction());
 
-        int tabNamber = 0;
+        int tabNamber = 1;
 
 
          Emploeer [] staff  = new Emploeer[5];
 
-         staff[0] = new Emploeer("Петров",35,35000,"manager", tabNamber);
-         tabNamber ++;
-         staff[1] = new Emploeer("Сидоров",45,25000,"offis manager",tabNamber);
-         tabNamber ++;
-         staff[2] = new Emploeer("Князев",50,32000,"people manager", tabNamber);
-         tabNamber ++;
-         staff[3] = new Emploeer("Белый",30,45000,"task manager", tabNamber);
-         tabNamber ++;
+         staff[0] = new Emploeer("Петров",35,35000,"manager", tabNamber++);
+         staff[1] = new Emploeer("Сидоров",45,25000,"offis manager",tabNamber++);
+         staff[2] = new Emploeer("Князев",50,32000,"people manager", tabNamber++);
+         staff[3] = new Emploeer("Белый",30,45000,"task manager", tabNamber++);
          staff[4] = new Emploeer("Счастливый",51,50000,"happy manager",tabNamber);
 
 
-        for (Emploeer emploeer : staff) {
-            emploeer1 = emploeer;
-            if (emploeer1.age > 40) {
-                System.out.println("Фамилия " + emploeer1.firstName + " Должность " + emploeer1.function + " з/п " + emploeer1.salary);
+        for (int i = 0; i < staff.length; i++) {
+            if (staff[i].age > 40) {
+                System.out.println("Фамилия " + staff[i].firstName + " Должность " + staff[i].function + " з/п " + staff[i].salary);
             }
         }
 
-         upSallary(staff,emploeer1);
+         upSallary(staff);
 
         for (int i = 0; i < staff.length; i++) {
-            emploeer1 = staff[i];
-            if (emploeer1.age > 45) {
-                System.out.println("Фамилия " + emploeer1.firstName + " Должность " + emploeer1.function + " з/п " + emploeer1.salary + " Personal Namber " + emploeer1.getPersonalNamber());
+            if (staff[i].age > 45) {
+                System.out.println("Фамилия " + staff[i].firstName + " Должность " + staff[i].function + " з/п " + staff[i].salary + " Personal Namber " + staff[i].getPersonalNamber());
             }
         }
         double averageSalary = 0;
         double averageAge = 0;
         for (int i =0; i<staff.length; i++) {
-            emploeer1 = staff[i];
-            averageSalary = averageSalary + emploeer1.salary;
-            averageAge = averageAge + emploeer1.age;
+            averageSalary = averageSalary + staff[i].salary;
+            averageAge = averageAge + staff[i].age;
         }
         averageSalary = averageSalary/staff.length;
         averageAge = averageAge/staff.length;
 
-        System.out.println("Age :" + averageAge + " Salary :" + averageSalary);
+        System.out.println("Средний возраст : " + averageAge + " Средняя зарплата : " + averageSalary);
 
     }
 
