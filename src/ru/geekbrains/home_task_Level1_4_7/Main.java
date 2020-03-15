@@ -45,7 +45,7 @@ public class Main {
         for (int i = 0; i < staff.length; i++) {
             emploeer1 = staff[i];
             if (emploeer1.age > 45) {
-                System.out.println("Фамилия " + emploeer1.firstName + " Должность " + emploeer1.function + " з/п " + emploeer1.salary + " Tab Namber " + emploeer1.tabNamber);
+                System.out.println("Фамилия " + emploeer1.firstName + " Должность " + emploeer1.function + " з/п " + emploeer1.salary + " Personal Namber " + emploeer1.getPersonalNamber());
             }
         }
         double averageSalary = 0;

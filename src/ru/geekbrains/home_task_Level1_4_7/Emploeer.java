@@ -1,11 +1,12 @@
 package ru.geekbrains.home_task_Level1_4_7;
 
 public class Emploeer {
-        String firstName;
-        int age;
-        double salary;
-        String function;
-        int tabNamber;
+                String firstName;
+                int age;
+                double salary;
+                String function;
+                int tabNamber;
+        private int personalNamber;
 
     Emploeer () {
         this.firstName = "Иванов";
@@ -19,6 +20,7 @@ public class Emploeer {
         this.salary = salary;
         this.function = function;
         this.tabNamber = tabNamber;
+        persinalInn();
     }
 
     public String getFirstName (){
@@ -33,13 +35,13 @@ public class Emploeer {
     public String getFunction () {
         return this.function;
     }
-    public int getTablNomber () {
-        return tabNamber;
+    public int getPersonalNamber () {
+        return personalNamber;
     }
- /*   private int countTabNamber() {
-        tabNamber = tabNamber + 1;
+    private int persinalInn() {
+        personalNamber = 5503000 + tabNamber;
         return tabNamber;
 
     }
-*/
+
 }
